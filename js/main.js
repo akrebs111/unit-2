@@ -13,11 +13,12 @@ function createMap() {
     //adds the selected tileset, Alidade Smooth Dark from Stadiamaps and gives the proper credits
     //also provides a minZoom and maxZoom for viewing the map/data.
     //adds the tileLayer to our map. 
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}?access_token={accessToken}', {
 	minZoom: 3,
 	maxZoom: 6,
 	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	ext: 'png'
+	ext: 'png',
+    accessToken: 'pk.eyJ1IjoiYWtyZWJzMTExIiwiYSI6ImNsenI4b2UzaDBpbzEycnB3YnFxbzl1NjkifQ.txH8KRtKR3DP1V8hdKs_eA'
 }).addTo(map);
 
     //call getData function
